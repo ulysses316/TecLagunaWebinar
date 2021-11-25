@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/master.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        #poke-table{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-danger mb-4">
+        <a class="navbar-brand" href="#">
+            <img src="./img/GDG UNAM Dark Horizontal-Logo (1).png" width="50%" alt="" loading="lazy">
+        </a>
+    </nav>
+    <!-- Menu de eleccion -->
+    <div class="container mt-4 mb-4">
+        <h1 class="text-center">Bienvenida a la PokeAPI</h1>
+        <h2 class="text-center">Taller de GDG UNAM</h2>
+    </div>
+
+    <!-- Pokemon o numero -->
+    <div id="pokemonOrNumber">
+        <div class="text-center container">
+            <label>¿Que pokemon quieres ver?</label>
+            <input class="form-control text-center" id="pokemon" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">Puedes introducir el nombre de un pokemon o un numero hasta el 893</small>
+            <button onclick="baseURL()" class="mr-2 btn btn-warning mt-2">Buscar</button>
+        </div>
+    </div>
+
+    <!-- Tabla de resultados Pokemon -->
+    <div id="poke-table" class="container mb-4">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <img id="image" src="" alt="">
+            </div>
+            <div class="col-6 text-center">
+                <p>Nombre</p>
+            </div>
+            <div class="col-6 text-center">
+                <p id="parameterValue0"></p>
+            </div>
+            <div class="col-6 text-center">
+                <p>ID</p>
+            </div>
+            <div class="col-6 text-center">
+                <p id="parameterValue1"></p>
+            </div>
+            <div class="col-6 text-center">
+                <p>Experiencia base</p>
+            </div>
+            <div class="col-6 text-center">
+                <p id="parameterValue2"></p>
+            </div>
+            <div class="col-6 text-center">
+                <p>Altura</p>
+            </div>
+            <div class="col-6 text-center">
+                <p id="parameterValue3"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script  src="./js/poke.js"></script>
+    <!-- bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
